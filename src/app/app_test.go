@@ -74,7 +74,7 @@ func TestApp(t *testing.T) {
 
 	for caseNumber, item := range cases {
 
-		req := httptest.NewRequest(item.Method, "http://localhost:3000/account", strings.NewReader(item.RequestBody))
+		req := httptest.NewRequest(item.Method, "http://localhost/account", strings.NewReader(item.RequestBody))
 		w := httptest.NewRecorder()
 
 		switch item.Method {
